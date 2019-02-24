@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffff"
+    tools:context=".HomePage">
+
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/compexam" />
+
+    <ImageButton
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="400dp"
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/collegeinfo" />
+
+    <ImageButton
+        android:layout_marginTop="250dp"
+        android:layout_marginLeft="220dp"
+        android:id="@+id/imageButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/docup" />
+
+    <ImageButton
+        android:layout_marginTop="250dp"
+        android:id="@+id/imageButton4"
+        android:layout_marginLeft="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/rankp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:background="@drawable/logout"
+        android:layout_marginTop="600dp"
+
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logout" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/homelogo" />
+
+
+</RelativeLayout>
