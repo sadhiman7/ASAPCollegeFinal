@@ -18,11 +18,13 @@ public class HomePage extends AppCompatActivity {
         DocUpload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Intent i = new Intent("com.example.myapplication.DocUpload");
-                startActivity(i);
-
+                openDocUpload();
             }
         });
+    }
+    public void openDocUpload()
+    {
+        Intent intent = new Intent(this, DocUpload.class);
+        startActivity(intent);
     }
 }

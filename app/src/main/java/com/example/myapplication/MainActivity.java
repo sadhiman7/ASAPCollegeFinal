@@ -6,8 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -16,11 +19,14 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class MainActivity extends AppCompatActivity{
+public class  MainActivity extends AppCompatActivity{
 
     EditText email,password;
     Button login,signup;
+    ImageView homelogo;
     private FirebaseAuth mAuth;
+    Animation frombottom;
+    Animation fromtop;
 
 
     @Override
@@ -31,6 +37,16 @@ public class MainActivity extends AppCompatActivity{
         password=(EditText)findViewById(R.id.editText2);
         login=(Button)findViewById(R.id.button2);
         signup=(Button)findViewById(R.id.button);
+        homelogo=(ImageView)findViewById(R.id.imageView4);
+
+        fromtop = AnimationUtils.loadAnimation(this, R.anim.fromtop);
+        frombottom = AnimationUtils.loadAnimation(this, R.anim.frombottom);
+        login.setAnimation(frombottom);
+        signup.setAnimation(frombottom);
+        email.setAnimation(frombottom);
+        password.setAnimation(frombottom);
+        homelogo.setAnimation(fromtop);
+
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
