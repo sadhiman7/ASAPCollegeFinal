@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#3194f6"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="200dp"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:text="COLLEGE INFO"
+                android:textSize="30dp"/>
+        </RelativeLayout>
+
+        <GridLayout
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="1"
+            android:rowCount="2"
+            android:alignmentMode="alignMargins"
+            android:columnOrderPreserved="false">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:id="@+id/mpstme"
+                android:elevation="6dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp"
+                >
+                <RelativeLayout
+                    android:padding="16dp"
+                    android:background="@drawable/homepagebuttons"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:src="@drawable/mpstme"
+                        android:background="#ffff"
+                        android:layout_centerVertical="true"
+                        android:layout_width="120dp"
+                        android:layout_height="100dp" />
+
+                    <TextView
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="150dp"
+                        android:textColor="#000000"
+                        android:textSize="18dp"
+                        android:text="Mukesh Patel School of Technology Management and Engineering"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:elevation="6dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp"
+                >
+                <RelativeLayout
+                    android:padding="16dp"
+                    android:background="@drawable/homepagebuttons"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:src="@drawable/djsce"
+                        android:background="#ffff"
+                        android:layout_centerVertical="true"
+                        android:layout_width="120dp"
+                        android:layout_height="100dp" />
+
+                    <TextView
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="150dp"
+                        android:textColor="#000000"
+                        android:textSize="18dp"
+                        android:text="Dwarkadas J Sanghvi College of Engineering"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+        </GridLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

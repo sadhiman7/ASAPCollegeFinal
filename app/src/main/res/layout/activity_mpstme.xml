@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#3194f6"
+    android:layout_height="match_parent"
+    tools:context=".mpstme">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="40dp"
+            android:layout_marginHorizontal="20dp"
+            android:padding="20dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:background="@drawable/homepagebuttons">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textStyle="bold"
+                    android:id="@+id/name"
+                    android:textSize="30dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/info"
+                    android:layout_marginTop="15dp"
+                    android:textSize="20dp"
+                    android:text="Info"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/info"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    android:textSize="20dp"
+                    android:text="Highest Packages"/>
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:rowCount="2"
+                    android:alignmentMode="alignMargins"
+                    android:columnOrderPreserved="false">
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:layout_rowWeight="1"
+                            android:elevation="6dp"
+                            android:id="@+id/clginfo"
+                            >
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:padding="10dp"
+                                    android:gravity="center"
+                                    android:background="#ffff"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                        <TextView
+                                            android:textColor="#000000"
+                                            android:textSize="10dp"
+                                            android:text="International"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content" />
+
+                                </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:layout_rowWeight="1"
+                            android:elevation="6dp"
+                            android:id="@+id/clginfo"
+                            >
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:padding="10dp"
+                                    android:gravity="center"
+                                    android:background="#ffff"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                        <TextView
+                                            android:textColor="#000000"
+                                            android:id="@+id/hdompack"
+                                            android:textSize="10dp"
+                                            android:text="College Info"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content" />
+
+                                </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:layout_rowWeight="1"
+                            android:elevation="6dp"
+                            android:id="@+id/clginfo"
+                            >
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:padding="10dp"
+                                    android:gravity="center"
+                                    android:background="#ffff"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                        <TextView
+                                            android:textColor="#000000"
+                                            android:textSize="10dp"
+                                            android:text="Domestic"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content" />
+
+                                </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:layout_rowWeight="1"
+                            android:elevation="6dp"
+                            android:id="@+id/clginfo"
+                            >
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:padding="10dp"
+                                    android:gravity="center"
+                                    android:background="#ffff"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                        <TextView
+                                            android:textColor="#000000"
+                                            android:textSize="10dp"
+                                            android:id="@+id/hintpack"
+                                            android:text="College Info"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content" />
+
+                                </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                </GridLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/info"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    android:textSize="20dp"
+                    android:text="Average Packages"/>
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:rowCount="2"
+                    android:alignmentMode="alignMargins"
+                    android:columnOrderPreserved="false">
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:layout_rowWeight="1"
+                            android:elevation="6dp"
+                            android:id="@+id/clginfo"
+                            >
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:padding="10dp"
+                                    android:gravity="center"
+                                    android:background="#ffff"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                        <TextView
+                                            android:textColor="#000000"
+                                            android:textSize="10dp"
+                                            android:text="International"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content" />
+
+                                </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:layout_rowWeight="1"
+                            android:elevation="6dp"
+                            android:id="@+id/clginfo"
+                            >
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:padding="10dp"
+                                    android:gravity="center"
+                                    android:background="#ffff"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                        <TextView
+                                            android:textColor="#000000"
+                                            android:id="@+id/adompack"
+                                            android:textSize="10dp"
+                                            android:text="College Info"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content" />
+
+                                </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:layout_rowWeight="1"
+                            android:elevation="6dp"
+                            android:id="@+id/clginfo"
+                            >
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:padding="10dp"
+                                    android:gravity="center"
+                                    android:background="#ffff"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                        <TextView
+                                            android:textColor="#000000"
+                                            android:textSize="10dp"
+                                            android:text="Domestic"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content" />
+
+                                </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:layout_rowWeight="1"
+                            android:elevation="6dp"
+                            android:id="@+id/clginfo"
+                            >
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:padding="10dp"
+                                    android:gravity="center"
+                                    android:background="#ffff"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                        <TextView
+                                            android:textColor="#000000"
+                                            android:textSize="10dp"
+                                            android:id="@+id/aintpack"
+                                            android:text="College Info"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content" />
+
+                                </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                </GridLayout>
+
+
+        </LinearLayout>
+
+
+
+
+</ScrollView>
