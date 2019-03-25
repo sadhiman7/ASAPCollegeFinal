@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/collegeinfo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:id="@+id/slide_image"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="COLLEGE INFORMATION"
+        android:id="@+id/slide_headings"
+        android:layout_marginTop="320dp"
+        android:textSize="25dp"
+        android:textColor="@color/Black" />
+
+    <TextView
+        android:paddingHorizontal="70dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/Black"
+        android:id="@+id/slide_desc"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="380dp"
+        android:text="asap asap asap asap asap asap asap asap asap asap asap asap asap asap asap asap asap asap asap asap"/>
+
+
+</RelativeLayout>

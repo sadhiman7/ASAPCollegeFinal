@@ -6,10 +6,13 @@
     android:background="#3194f6"
     android:layout_height="match_parent"
     tools:context=".mpstme">
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_marginTop="40dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
             android:padding="20dp"
             android:orientation="vertical"
@@ -68,7 +71,7 @@
 
                                         <TextView
                                             android:textColor="#000000"
-                                            android:textSize="10dp"
+                                            android:textSize="20dp"
                                             android:text="International"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content" />
@@ -96,8 +99,7 @@
                                         <TextView
                                             android:textColor="#000000"
                                             android:id="@+id/hdompack"
-                                            android:textSize="10dp"
-                                            android:text="College Info"
+                                            android:textSize="20dp"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content" />
 
@@ -123,7 +125,7 @@
 
                                         <TextView
                                             android:textColor="#000000"
-                                            android:textSize="10dp"
+                                            android:textSize="20dp"
                                             android:text="Domestic"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content" />
@@ -150,9 +152,8 @@
 
                                         <TextView
                                             android:textColor="#000000"
-                                            android:textSize="10dp"
+                                            android:textSize="20dp"
                                             android:id="@+id/hintpack"
-                                            android:text="College Info"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content" />
 
@@ -198,7 +199,7 @@
 
                                         <TextView
                                             android:textColor="#000000"
-                                            android:textSize="10dp"
+                                            android:textSize="20dp"
                                             android:text="International"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content" />
@@ -226,8 +227,7 @@
                                         <TextView
                                             android:textColor="#000000"
                                             android:id="@+id/adompack"
-                                            android:textSize="10dp"
-                                            android:text="College Info"
+                                            android:textSize="20dp"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content" />
 
@@ -253,7 +253,7 @@
 
                                         <TextView
                                             android:textColor="#000000"
-                                            android:textSize="10dp"
+                                            android:textSize="20dp"
                                             android:text="Domestic"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content" />
@@ -280,9 +280,8 @@
 
                                         <TextView
                                             android:textColor="#000000"
-                                            android:textSize="10dp"
+                                            android:textSize="20dp"
                                             android:id="@+id/aintpack"
-                                            android:text="College Info"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content" />
 
@@ -293,9 +292,25 @@
                 </GridLayout>
 
 
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Apply for NPAT"
+                    android:id="@+id/npat"
+                    android:textSize="20dp"
+                    android:background="@drawable/button_round"/>
         </LinearLayout>
 
 
-
+        </LinearLayout>
 
 </ScrollView>

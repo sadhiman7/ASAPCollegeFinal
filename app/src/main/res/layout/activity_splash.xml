@@ -4,15 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Splash"
-    android:background="@drawable/bckg1">
+    android:background="@color/White">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/asap"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        app:srcCompat="@drawable/logo1"
-        tools:layout_editor_absoluteX="141dp"
-        tools:layout_editor_absoluteY="301dp" />
+        android:src="@drawable/asap"
+        android:layout_marginLeft="50dp"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="250dp"
+         />
+
+    <ImageView
+        android:id="@+id/college"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/college"
+        android:paddingTop="10dp"
+        android:layout_marginLeft="250dp"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        />
 </RelativeLayout>

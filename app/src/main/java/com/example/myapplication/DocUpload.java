@@ -105,6 +105,8 @@ public class DocUpload extends AppCompatActivity {
                                 else
                                     Toast.makeText(DocUpload.this, "File Not Successfully Uploaded", Toast.LENGTH_LONG).show();
 
+                                progressDialog.dismiss();
+
                             }
                         });
 
@@ -114,6 +116,7 @@ public class DocUpload extends AppCompatActivity {
             public void onFailure(@NonNull Exception e) {
 
                 Toast.makeText(DocUpload.this, "File Not Successfully Uploaded", Toast.LENGTH_LONG).show();
+                progressDialog.dismiss();
 
             }
         }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
@@ -155,6 +158,7 @@ public class DocUpload extends AppCompatActivity {
         if(requestCode==86 && resultCode==RESULT_OK && data!=null)
         {
             pdfUri=data.getData();
+            notification.setText("File Selected!");
         }
         else{
             Toast.makeText(DocUpload.this, "please select a file...", Toast.LENGTH_SHORT).show();

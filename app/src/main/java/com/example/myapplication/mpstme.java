@@ -1,7 +1,10 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,6 +18,7 @@ public class mpstme extends AppCompatActivity {
     TextView Name;
     TextView Info;
     TextView hdp, hip, adp, aip;
+    Button npat;
     ImageView mpstme;
 
     Firebase mName, mInfo, mHDom, mHInt, mADom, mAInt;
@@ -120,5 +124,18 @@ public class mpstme extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mpstme);
+
+        npat = (Button)findViewById(R.id.npat);
+        npat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openNPAT();
+            }
+        });
+    }
+    public void openNPAT()
+    {
+        Intent intent = new Intent (this, npat.class);
+        startActivity(intent);
     }
 }
