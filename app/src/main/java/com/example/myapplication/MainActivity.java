@@ -23,9 +23,11 @@ import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.GoogleAuthProvider;
 
 public class  MainActivity extends AppCompatActivity{
 
@@ -132,6 +134,7 @@ public class  MainActivity extends AppCompatActivity{
     {
         try {
             GoogleSignInAccount account = completedTask.getResult(ApiException.class);
+            firebaseAuthWithGoogle(account);
             startActivity(new Intent(MainActivity.this, HomePage.class));
         }catch(ApiException e)
         {
@@ -141,6 +144,26 @@ public class  MainActivity extends AppCompatActivity{
     }
 
 
+    private void firebaseAuthWithGoogle(GoogleSignInAccount acct) {
 
+
+        AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(), null);
+        mAuth.signInWithCredential(credential)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            // Sign in success, update UI with the signed-in user's information
+
+                            FirebaseUser user = mAuth.getCurrentUser();
+
+                        } else {
+                            // If sign in fails, display a message to the user.
+                        }
+
+                        // ...
+                    }
+                });
+    }
 
 }
