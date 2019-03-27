@@ -135,7 +135,7 @@ public class mpstme extends AppCompatActivity {
     }
     public void openNPAT()
     {
-        Intent intent = new Intent (this, npat.class);
+        Intent intent = new Intent (this, npat_form.class);
         startActivity(intent);
     }
 }

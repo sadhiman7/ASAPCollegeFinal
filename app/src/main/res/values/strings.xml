@@ -11,4 +11,5 @@
     <string name="name">Name</string>
     <string name="email">Email</string>
     <string name="email1">Email</string>
+    <string name="title_activity_npat_form">npat_form</string>
 </resources>

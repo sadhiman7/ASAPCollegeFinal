@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#3194f6"
+    android:layout_height="match_parent"
+    tools:context=".mpstme">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:padding="20dp"
+
+            android:layout_height="wrap_content"
+            android:background="@drawable/homepagebuttons">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textStyle="bold"
+                android:id="@+id/fname"
+                android:textSize="20dp"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/fname"
+                android:id="@+id/infname"
+                android:textSize="20dp"
+                android:layout_marginLeft="20dp"
+                android:paddingHorizontal="20dp"
+                android:background="@drawable/edit_round"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last Name"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/fname"
+                android:textStyle="bold"
+                android:id="@+id/lname"
+                android:textSize="20dp"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/lname"
+                android:layout_below="@+id/infname"
+                android:gravity="right"
+                android:id="@+id/inlname"
+                android:layout_marginTop="10dp"
+                android:textSize="20dp"
+                android:layout_marginLeft="20dp"
+                android:paddingHorizontal="20dp"
+                android:background="@drawable/edit_round"
+                />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Apply for NPAT"
+                android:id="@+id/npat"
+                android:textSize="20dp"
+                android:background="@drawable/button_round"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>
