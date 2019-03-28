@@ -58,6 +58,8 @@ public class  MainActivity extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 signIn();
+                Intent i=new Intent("com.example.myapplication.Main3Activity");
+               startActivity(i);
             }
         });
 
@@ -120,50 +122,29 @@ public class  MainActivity extends AppCompatActivity{
         Intent signInIntent=mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent,RC_SIGN_IN);
     }
-    @Override
-    public void onActivityResult(int requestCode,int resultCode,Intent data)
-    {
-        super.onActivityResult(requestCode,resultCode,data);
-        if(requestCode==RC_SIGN_IN)
-        {
-            Task<GoogleSignInAccount> task=GoogleSignIn.getSignedInAccountFromIntent(data);
+   @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        // Result returned from launching the Intent from GoogleSignInClient.getSignInIntent(...);
+        if (requestCode == RC_SIGN_IN) {
+            // The Task returned from this call is always completed, no need to attach
+            // a listener.
+            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             handleSignInResult(task);
         }
     }
-    private void handleSignInResult(Task<GoogleSignInAccount> completedTask)
-    {
+    private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
         try {
             GoogleSignInAccount account = completedTask.getResult(ApiException.class);
-            firebaseAuthWithGoogle(account);
-            startActivity(new Intent(MainActivity.this, HomePage.class));
-        }catch(ApiException e)
-        {
-            Log.w("Error","Sign in result failed, error code:" + e.getStatusCode());
-            Toast.makeText(MainActivity.this,"Failed",Toast.LENGTH_LONG).show();
+
+            // Signed in successfully, show authenticated UI.
+        } catch (ApiException e) {
+            // The ApiException status code indicates the detailed failure reason.
+            // Please refer to the GoogleSignInStatusCodes class reference for more information.
+            Log.w(TAG, "signInResult:failed code=" + e.getStatusCode());
         }
     }
 
-
-    private void firebaseAuthWithGoogle(GoogleSignInAccount acct) {
-
-
-        AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(), null);
-        mAuth.signInWithCredential(credential)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
-
-                            FirebaseUser user = mAuth.getCurrentUser();
-
-                        } else {
-                            // If sign in fails, display a message to the user.
-                        }
-
-                        // ...
-                    }
-                });
-    }
 
 }
