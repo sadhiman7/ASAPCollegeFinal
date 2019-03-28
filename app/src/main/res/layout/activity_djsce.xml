@@ -1,9 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#3194f6"
     android:layout_height="match_parent"
     tools:context=".djsce">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:padding="20dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:background="@drawable/homepagebuttons">
 
-</android.support.constraint.ConstraintLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dwarkadas J. Sanghvi College of Engineering"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:text="Dwarkadas J. Sanghvi College of Engineering (DJSCE), was established in 1994, in Mumbai,
+India. The college has its affiliation from University of Mumbai.
+The mission of the college is to prepare competent engineers, technocrats and researchers for various sectors of industries in order to meet the challenges and help industry and society for
+a better life.
+The college is approved by AICTE and also provides latest and rich curriculum to its students. DJSCE has become one of the premier institutes of technical education. DJSCE has named
+amongst the top 3 best engineering colleges in Mumbai.
+
+RANKING:
+By Outlook India in 2017: 33
+By Outlook India in 2016: 32
+By The Week in 2016: 82"
+                />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_margin="20dp"
+            android:layout_height="wrap_content"
+            android:text="Learn More About mhcet"
+            android:id="@+id/mhcet"
+            android:textSize="20dp"
+            android:background="@drawable/button_round"/>
+
+
+
+    </LinearLayout>
+</ScrollView>

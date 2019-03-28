@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,6 +32,7 @@ public class DocUpload extends AppCompatActivity {
 
     Button selectFile, upload;
     TextView notification;
+    EditText email;
     Uri pdfUri;
 
     FirebaseStorage storage;
@@ -46,6 +48,8 @@ public class DocUpload extends AppCompatActivity {
         storage = FirebaseStorage.getInstance();
         database = FirebaseDatabase.getInstance();
 
+        email = (EditText) findViewById(R.id.emailinput);
+
         selectFile=findViewById(R.id.selectFile);
         upload=findViewById(R.id.upload);
         notification = findViewById(R.id.notification);
@@ -56,7 +60,11 @@ public class DocUpload extends AppCompatActivity {
 
                 if(ContextCompat.checkSelfPermission(DocUpload.this, Manifest.permission.READ_EXTERNAL_STORAGE)== PackageManager.PERMISSION_GRANTED)
                 {
-                    selectPdf();
+                    String fmail = email.getText().toString();
+                    if(fmail!=null)
+                        selectPdf();
+                    else
+                        Toast.makeText(DocUpload.this, "Enter an eMail!", Toast.LENGTH_LONG).show();
                 }
                 else
                     ActivityCompat.requestPermissions(DocUpload.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 9);
@@ -67,8 +75,14 @@ public class DocUpload extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if(pdfUri!=null)
-                uploadFile(pdfUri);
+                String em = email.getText().toString();
+
+                if(em==null){
+                    email.setError("Please enter an email");
+                }
+
+                else if(pdfUri!=null)
+                    uploadFile(pdfUri, em);
                 else
                     Toast.makeText(DocUpload.this,"Select a File", Toast.LENGTH_SHORT).show();
 
@@ -77,7 +91,7 @@ public class DocUpload extends AppCompatActivity {
 
     }
 
-    private void uploadFile(Uri pdfUri) {
+    private void uploadFile(Uri pdfUri, String fmail) {
 
         progressDialog = new ProgressDialog(this);
         progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
@@ -88,7 +102,7 @@ public class DocUpload extends AppCompatActivity {
         final String fileName=System.currentTimeMillis()+"";
         final StorageReference storageReference=storage.getReference();
 
-        storageReference.child("Uploads").child(fileName).putFile(pdfUri)
+        storageReference.child("Uploads").child(fmail).putFile(pdfUri)
                 .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
@@ -166,3 +180,5 @@ public class DocUpload extends AppCompatActivity {
 
     }
 }
+
+

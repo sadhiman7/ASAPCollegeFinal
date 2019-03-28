@@ -26,7 +26,7 @@ public class HomePage extends AppCompatActivity {
 
     CardView DocUpload;
     boolean doubleBackToExitPressedOnce = false;
-    CardView ClgInfo, ExamInfo;
+    CardView ClgInfo, ExamInfo, Reviews;
     Button logout;
     GoogleSignInClient nGoogleSignInClient;
     GoogleApiClient mGoogleApiClient;
@@ -71,6 +71,14 @@ public class HomePage extends AppCompatActivity {
         ClgInfo = (CardView)findViewById(R.id.clginfo);
         ExamInfo = (CardView)findViewById(R.id.examinfo);
         DocUpload = (CardView)findViewById(R.id.docup);
+        Reviews = (CardView)findViewById(R.id.reviews);
+
+        Reviews.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomePage.this,mpstmerev.class));
+            }
+        });
 
         DocUpload.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,6 +98,7 @@ public class HomePage extends AppCompatActivity {
                 openexaminfo();
             }
         });
+
 
         logout = (Button) findViewById(R.id.button3);
         logout.setOnClickListener(new View.OnClickListener() {

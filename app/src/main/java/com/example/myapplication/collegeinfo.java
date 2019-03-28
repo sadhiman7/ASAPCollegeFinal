@@ -8,7 +8,7 @@ import android.view.View;
 
 public class collegeinfo extends AppCompatActivity {
 
-    CardView mpstme;
+    CardView mpstme, djsce;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,11 +16,18 @@ public class collegeinfo extends AppCompatActivity {
         setContentView(R.layout.activity_collegeinfo);
 
         mpstme = (CardView)findViewById(R.id.mpstme);
+        djsce = (CardView)findViewById(R.id.djsce);
 
         mpstme.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openmpstme();
+            }
+        });
+        djsce.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(collegeinfo.this,djsce.class));
             }
         });
     }

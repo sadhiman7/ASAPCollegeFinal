@@ -8,37 +8,93 @@
     tools:context=".DocUpload"
     android:padding="20dp">
 
-    <RelativeLayout
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/homepagebuttons">
-    <Button
+        android:orientation="vertical"
+        android:background="@drawable/homepagebuttons"
+        android:padding="20dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Document Upload"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textSize="25dp"
+
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="
+Compile the following documents in a PDF file and upload:
+•	Class 10 marksheet and certificate
+•	Class 12 marksheet and certificate
+•	Hall Ticket of NPAT
+•	Transfer Certificate from the institution from which the candidate has passed
+•	Category certificate if applicable
+•	Candidates who have passed their 10+2 or equivalent examination from overseas board/ Universities are required to submit AIU equivalence certificate to confirm the eligibility for the program.
+•	Candidates who have passed, or, are appearing for 10+2 examination from a Board/University where Grade Point Average is given, they would have to produce in writing from the Board/University concerned, the equivalent percentage for the GPA /CGPA obtained
+•	Passport size photograph
+   Format - JPEG
+   File Size - Less than 500 kb
+   Dimensions - 200*150 pixels
+"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter eMail id which you entered in the google form"
+            android:inputType="textEmailAddress"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/emailinput"
+            android:background="@drawable/edit_round"
+            android:layout_marginTop="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <Button
         android:id="@+id/selectFile"
         android:layout_width="wrap_content"
-        android:layout_marginTop="100dp"
+            android:layout_marginLeft="20dp"
         android:layout_centerHorizontal="true"
         android:layout_height="wrap_content"
         android:text="select file"
         android:paddingHorizontal="20dp"
         android:background="@drawable/button_round"/>
 
-    <TextView
-        android:id="@+id/notification"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="200dp"
-        android:layout_marginBottom="0dp"
-        android:text="No file is selected" />
+
 
     <Button
         android:id="@+id/upload"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="300dp"
         android:text="UPLOAD"
         android:paddingHorizontal="20dp"
+        android:layout_marginLeft="20dp"
         android:background="@drawable/button_round"/>
-</RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="0dp"
+            android:text="No file is selected" />
+</LinearLayout>
 </RelativeLayout>

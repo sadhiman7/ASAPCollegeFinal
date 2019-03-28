@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <ScrollView tools:context=".mhcet"
+    android:background="#3194f6"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    -<LinearLayout android:layout_height="match_parent" android:layout_width="match_parent" android:orientation="vertical">
+
+
+    -<LinearLayout android:background="@drawable/homepagebuttons" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical" android:padding="20dp" android:layout_marginHorizontal="20dp" android:layout_marginTop="20dp">
+
+    <TextView android:layout_height="wrap_content" android:layout_width="match_parent" android:textStyle="bold" android:textAllCaps="true" android:textAlignment="center" android:textSize="20dp" android:text="MHCET Entrance Examination"/>
+
+    <TextView android:layout_marginTop="20dp" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="MHT CET or Maharashtra Common Entrance Test is a state-level entrance exam conducted for admission into Engineering and Allied Health Sciences courses in Maharashtra. MHT CET 2019 is scheduled for multiples dates from May 2 to May 13, 2019 in online mode. More than 360 colleges participate in MHT CET. It is one of the most popular state level entrance examinations for which every year lakhs of candidates apply. "/>
+
+    <TextView android:layout_marginTop="20dp" android:layout_height="wrap_content" android:layout_width="match_parent" android:textStyle="bold" android:textAlignment="center" android:text="IMPORTANT DATES"/>
+
+
+
+    <TextView android:layout_height="wrap_content" android:layout_width="match_parent" android:textStyle="bold" android:textAlignment="center" android:text="ELIGIBILITY CRITERIA"/>
+
+
+    <TextView android:layout_height="wrap_content" android:layout_width="match_parent" android:textStyle="bold" android:textAlignment="center" android:text="EXAM PATTERN"/>
+
+    <TextView android:layout_height="wrap_content" android:layout_width="match_parent" android:textStyle="bold" android:textAlignment="center" android:text=" DOCUMENTS REQUIRED DURING COUNSELLING"/>
+
+
+</LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:layout_height="wrap_content"
+        android:text="APPLY for mhcet"
+        android:id="@+id/applymhcet"
+        android:textSize="20dp"
+        android:background="@drawable/button_round"/>
+
+</LinearLayout>
+
+
+</ScrollView>

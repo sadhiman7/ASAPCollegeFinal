@@ -19,6 +19,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".mpstmerev">
+            <intent-filter>
+                <action android:name="com.example.myapplication.mpstmerev" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".mhcet" />
+        <activity android:name=".npat_info" />
         <activity
             android:name=".npat_form"
             android:label="@string/title_activity_npat_form"
@@ -28,7 +37,6 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-
         </activity>
         <activity android:name=".practice" />
         <activity android:name=".Introduction">

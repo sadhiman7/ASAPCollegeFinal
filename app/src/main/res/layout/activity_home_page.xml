@@ -157,6 +157,7 @@
                 android:layout_rowWeight="1"
                 android:elevation="6dp"
                 app:cardCornerRadius="12dp"
+                android:id="@+id/reviews"
                 android:layout_margin="12dp"
                 >
                 <LinearLayout

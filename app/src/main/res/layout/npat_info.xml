@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3194f6"
+    tools:context=".">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:padding="20dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:background="@drawable/homepagebuttons">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NPAT Entrance Examination"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NPAT exam is conducted for taking the admission of the candidates to Integrated Degree program and Undergraduate Degree program. These programs are offered by the constituent schools of these p rograms by SVKM's Narsee Monjee Institute of Management Studies at Shirpur, Bengaluru, Mumbai, Navi Mumbai and Indore Campuses.
+Eligible candidates can fill the application form in online mode along with the payment of the application fees.
+"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="IMPORTANT DATES"
+                android:textStyle="bold"
+                android:textAlignment="center"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:text="Availability of Online Application Form
+
+Last Date of submission of application form
+
+Availability of Admit Card or Call Letter
+
+NPAT UG 2019 Examination
+
+Announcement of Result
+"/>
+
+                <TextView
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="165dp"
+                    android:text="Second week of January 2019
+
+First week of May 2019
+
+
+Second week of May 2019
+
+Second week of May 2019
+
+Last week of May 2019
+" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ELIGIBILITY CRITERIA"
+                android:textStyle="bold"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Educational Qualification:
+•	Candidate should have qualified the 10+2 or equivalent examination from the recognised board or institute including International Baccalaureate Diploma (IB certificate or/and DP awarded are not eligible).
+•	 Candidates should have studied Physics, Chemistry and Mathematics along with English as a compulsory subject.
+•	Candidates with Diploma in Engineering with at least 50% aggregate marks are also eligible to apply.
+
+Required Marks:
+•	For Mumbai Campus- The candidates need to score at least 50% marks in Physics, Mathematics and Chemistry.
+•	For Shirpur Campus- The candidate should have secured at least 45% aggregate for Shirpur Campus.
+
+Age Limit: The candidate should be less than 25 years to be eligible for NPAT UG 2019.
+
+Eligibility for candidates passing from Open or Distance learning (ODL) school
+•	Candidates who have cleared the 10+2 or equivalent exam from Open or Distance learning (ODL) school which is recognized by National Institute of Open Schooling (NIOS).
+•	Candidates who have passed 10+2 through distance learning/ open school/ correspondence or externally other than NIOS will not be eligible to take the exam.
+"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="EXAM PATTERN"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:text="S.No
+
+1
+
+2
+
+3
+
+
+4
+
+
+
+
+
+
+
+
+
+
+
+5"
+                />
+                <TextView
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45dp"
+                    android:text="Particulars
+
+Mode of Examination
+
+Exam Duration
+
+Type of Questions
+
+
+Sections
+
+
+
+
+
+
+
+
+
+
+
+Total Number of Questions
+"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="190dp"
+                    android:text="Details
+
+Online
+
+2 hours
+
+Multiple choice questions (objective)
+
+•	Physics - 30 Questions
+•	Chemistry - 30 Questions
+•	Maths - 30 Questions
+•	Logical Intelligence - 20 Questions
+•	Language Proficiency - 10 Questions
+
+120
+"
+                    />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_margin="20dp"
+            android:layout_height="wrap_content"
+            android:text="APPLY FOR NPAT"
+            android:id="@+id/npat"
+            android:textSize="20dp"
+            android:background="@drawable/button_round"/>
+
+    </LinearLayout>
+
+</ScrollView>

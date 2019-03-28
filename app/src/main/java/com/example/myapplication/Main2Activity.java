@@ -30,7 +30,7 @@ public class Main2Activity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     DatabaseReference reff;
 
-    Firebase nUsers, updateUsers;
+    Firebase nUsers;
 
     public static int noofusers;
 
@@ -124,14 +124,10 @@ public class Main2Activity extends AppCompatActivity {
                                     users.setEmail(fmail);
                                     users.setName(fname);
 
-                                    noofusers = noofusers + 1;
-                                    String snusers = Integer.toString(noofusers);
+                                    FirebaseDatabase.getInstance().getReference("Users")
+                                            .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                            .setValue(users);
 
-                                    nUsers.setValue(noofusers);
-
-                                    reff.child(snusers).setValue(users);
-
-                                    FirebaseUser user = mAuth.getCurrentUser();
                                     finish();
                                 } else {
 
