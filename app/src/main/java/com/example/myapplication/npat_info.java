@@ -21,8 +21,7 @@ public class npat_info extends AppCompatActivity {
         formnpat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://forms.gle/DshEAYDeCWy2CC2h9"));
-                startActivity(browserIntent);
+
                 startActivity(new Intent(npat_info.this,DocUpload.class));
             }
     });}

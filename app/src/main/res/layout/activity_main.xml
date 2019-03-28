@@ -18,9 +18,19 @@
         android:layout_width="141dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="497dp"
+        android:layout_marginTop="450dp"
         android:background="@drawable/button_round"
         android:text="@string/login" />
+
+        <Button
+            android:id="@+id/fpass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="600dp"
+            android:background="@drawable/button_round"
+            android:text="forgot password"
+            android:paddingHorizontal="20dp"/>
 
     <EditText
         android:id="@+id/editText"
@@ -64,7 +74,7 @@
         android:layout_alignParentRight="true"
         android:layout_marginStart="228dp"
         android:layout_marginLeft="228dp"
-        android:layout_marginTop="600dp"
+        android:layout_marginTop="525dp"
         android:layout_marginEnd="43dp"
         android:layout_marginRight="43dp"
         android:background="@drawable/button_round"
@@ -75,7 +85,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="60dp"
-            android:layout_marginTop="595dp"
+            android:layout_marginTop="520dp"
             />
 
     <ImageView

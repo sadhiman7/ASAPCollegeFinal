@@ -30,7 +30,7 @@ import com.google.firebase.storage.UploadTask;
 
 public class DocUpload extends AppCompatActivity {
 
-    Button selectFile, upload;
+    Button selectFile, upload, gf;
     TextView notification;
     EditText email;
     Uri pdfUri;
@@ -50,9 +50,19 @@ public class DocUpload extends AppCompatActivity {
 
         email = (EditText) findViewById(R.id.emailinput);
 
+        gf = (Button)findViewById(R.id.gform);
+
         selectFile=findViewById(R.id.selectFile);
         upload=findViewById(R.id.upload);
         notification = findViewById(R.id.notification);
+
+        gf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://forms.gle/z61tTccfVS2QrAdM9"));
+                startActivity(browserIntent);
+            }
+        });
 
         selectFile.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -114,8 +124,12 @@ public class DocUpload extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
 
-                                if(task.isSuccessful())
-                                    Toast.makeText(DocUpload.this,"File Successfully Uploaded", Toast.LENGTH_LONG).show();
+                                if(task.isSuccessful()) {
+                                    Toast.makeText(DocUpload.this, "File Successfully Uploaded", Toast.LENGTH_LONG).show();
+                                    Intent intent = new Intent (DocUpload.this, payments.class);
+                                    startActivity(intent);
+                                }
+
                                 else
                                     Toast.makeText(DocUpload.this, "File Not Successfully Uploaded", Toast.LENGTH_LONG).show();
 

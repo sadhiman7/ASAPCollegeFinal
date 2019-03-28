@@ -12,13 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="248dp"
         android:orientation="vertical"
-        android:background="#121111">
-    
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:scaleType="centerCrop"
-        android:id="@+id/post_image"/>
+        android:background="#ffff"
+        android:padding="20dp">
     
     <TextView
         android:layout_width="match_parent"
@@ -26,13 +21,13 @@
         android:id="@+id/post_title"
         android:text="POST TITLE"
         android:textSize="20dp"
-        android:textColor="#ffff"/>
+        android:textColor="@color/Black"/>
     
     <TextView
         android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
         android:layout_height="wrap_content"
         android:id="@+id/post_desc"
-        android:textColor="#ffff"
         android:text="POST DESC"/>
 
     </LinearLayout>

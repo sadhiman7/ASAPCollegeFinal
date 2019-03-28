@@ -76,7 +76,7 @@ public class HomePage extends AppCompatActivity {
         Reviews.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(HomePage.this,mpstmerev.class));
+                startActivity(new Intent(HomePage.this,RankPred.class));
             }
         });
 
@@ -114,7 +114,7 @@ public class HomePage extends AppCompatActivity {
     }
     public void openDocUpload()
     {
-        Intent intent = new Intent(this, DocUpload.class);
+        Intent intent = new Intent(this, mpstmerev.class);
         startActivity(intent);
     }
 

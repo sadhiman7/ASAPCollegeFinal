@@ -128,6 +128,16 @@ public class Main2Activity extends AppCompatActivity {
                                             .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                             .setValue(users);
 
+                                    mAuth.signInWithEmailAndPassword(email.getText().toString(), epass.getText().toString());
+
+                                    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                                    user.sendEmailVerification();
+
+                                    FirebaseAuth.getInstance().signOut();
+
+                                    Intent intent = new Intent(Main2Activity.this, MainActivity.class);
+                                    startActivity(intent);
+
                                     finish();
                                 } else {
 

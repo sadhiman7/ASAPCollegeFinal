@@ -1,12 +1,14 @@
 package com.example.myapplication;
 
 import android.content.Context;
+import android.content.Intent;
 import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -21,6 +23,7 @@ public class mpstmerev extends AppCompatActivity {
 
     private RecyclerView mBlogList;
     private DatabaseReference mDatabase;
+    Button submitrev;
 
     @Override
     protected void onStart() {
@@ -33,7 +36,6 @@ public class mpstmerev extends AppCompatActivity {
 
                 viewHolder.setTitle(model.getTitle());
                 viewHolder.setDesc(model.getDesc());
-                viewHolder.setImage(getApplicationContext(), model.getImage());
 
             }
 
@@ -60,11 +62,6 @@ public class mpstmerev extends AppCompatActivity {
             TextView post_desc = (TextView)mView.findViewById(R.id.post_desc);
             post_desc.setText(desc);
         }
-        public void setImage(Context ctx, String image)
-        {
-            ImageView post_Image = (ImageView)mView.findViewById(R.id.post_image);
-            Picasso.with(ctx).load(image).into(post_Image);
-        }
 
     }
 
@@ -79,6 +76,15 @@ public class mpstmerev extends AppCompatActivity {
         mBlogList=(RecyclerView)findViewById(R.id.myrecycleview);
         mBlogList.setHasFixedSize(true);
         mBlogList.setLayoutManager(new LinearLayoutManager(this));
+
+        submitrev = (Button)findViewById(R.id.inrev);
+        submitrev.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent temp = new Intent(mpstmerev.this, reviewsubmit.class);
+                startActivity(temp);
+            }
+        });
 
 
 
