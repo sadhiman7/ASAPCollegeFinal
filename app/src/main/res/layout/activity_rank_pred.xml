@@ -7,29 +7,39 @@
     tools:context=".RankPred"
     android:padding="20dp"
     android:background="@color/bground">
-    
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/homepagebuttons"
         android:padding="20dp">
-        
+
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" 
+            android:layout_height="wrap_content"
+            android:text="RANK PREDICTOR"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            />
+
+        <TextView
+            android:layout_marginTop="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="WORK UNDER PROGRESS"
             android:textStyle="bold"
             android:textSize="30dp"
             android:textAlignment="center"/>
-        
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:src="@drawable/wrench"
-            android:layout_marginTop="100dp"/>
-        
-        
+            android:layout_marginTop="180dp"/>
+
+
     </RelativeLayout>
 
 </RelativeLayout>

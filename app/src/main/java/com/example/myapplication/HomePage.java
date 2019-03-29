@@ -121,7 +121,7 @@ public class HomePage extends AppCompatActivity {
 
     public void openexaminfo()
     {
-        Intent intent = new Intent(this, Exams.class);
+        Intent intent = new Intent(HomePage.this, ExamInfo.class);
         startActivity(intent);
     }
 

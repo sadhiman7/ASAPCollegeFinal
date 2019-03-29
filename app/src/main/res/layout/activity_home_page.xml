@@ -94,7 +94,7 @@
                     android:padding="16dp">
 
 
-                    <ImageButton
+                    <ImageView
                         android:id="@+id/exams"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -169,7 +169,7 @@
                     android:layout_height="match_parent">
 
 
-                    <ImageButton
+                    <ImageView
                         android:src="@drawable/rankp"
                         android:background="#ffff"
                         android:id="@+id/rankp"

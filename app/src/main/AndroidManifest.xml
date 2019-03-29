@@ -19,7 +19,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RankPred"></activity>
+        <activity android:name=".ExamInfo">
+            <action android:name="com.example.myapplication.ExamInfo" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+
+        </activity>
+        <activity android:name=".RankPred" />
         <activity android:name=".payments" />
         <activity android:name=".forgotpassword" />
         <activity android:name=".reviewsubmit" />
